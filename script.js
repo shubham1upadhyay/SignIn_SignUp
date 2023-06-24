@@ -99,16 +99,16 @@ function atProfile(){
 
   logoutBtn.addEventListener('click', () => {
     localStorage.removeItem('userData');
-    window.location.href = '/index.html';
+    window.location.href = '/';
   }); 
 }
 
 
-if(window.location.pathname === '/index.html' || window.location.pathname === '/' || window.location.pathname === 'https://shubham1upadhyay.github.io/SignIn_SignUp/')
+if(window.location.pathname === '/')
 {
   signupProcessing();
 }
-else if(window.location.pathname === '/profile.html')
+if(window.location.pathname === "/profile.html")
 {
   atProfile();
 }
