@@ -17,15 +17,16 @@ function isAuthenticated(){
 }
 
 //function for validating and storing the data
-function signupProcessing(){
-  signupBtn.addEventListener('click', ()=>{
-
+function signUpProcessing(){
+  // signupBtn.addEventListener('click', ()=>{
   const msg = document.getElementById("message");
   let name = fullName.value;
   let e = email.value;
   let pass = password.value;
   let cp = confirmPass.value;
 
+
+  // validating the fields
   if(name === '' || e === '' || pass === '' || cp === '')
   {
       msg.innerHTML = `
@@ -72,10 +73,10 @@ function signupProcessing(){
    `;
    
    setTimeout(() => {
-       window.location.href = '/profile.html';
+       window.location.href = 'profile.html';
      }, 2000);
     }
-  });
+  // });
 
 }
 
@@ -88,6 +89,8 @@ function atProfile(){
 
   const userData = JSON.parse(localStorage.getItem('userData'));
   let name = document.getElementById("user-name");
+
+  console.log(name);
   let em = document.getElementById("user-email");
   let p = document.getElementById("user-pass");
 
@@ -101,16 +104,6 @@ function atProfile(){
     localStorage.removeItem('userData');
     window.location.href = '/';
   }); 
-}
-
-
-if(window.location.pathname === '/')
-{
-  signupProcessing();
-}
-if(window.location.pathname === "/profile.html")
-{
-  atProfile();
 }
 
 // function to generate access token
