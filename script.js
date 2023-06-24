@@ -82,7 +82,7 @@ function signUpProcessing(){
 
 //functions at profile page
 function atProfile(){
-
+  msg.innerHTML = '';
   if (isAuthenticated()){
     window.location.href = 'profile.html';
   }
