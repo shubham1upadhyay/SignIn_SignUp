@@ -121,12 +121,3 @@ function generateToken(){
   }
   return token;
 }
-
-
-
-//for refreshing the page 
-window.history.reload();
-function reload() {
-  location.reload();
-}
-
