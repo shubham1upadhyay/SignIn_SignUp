@@ -104,7 +104,7 @@ function atProfile(){
 }
 
 
-if(window.location.pathname === '/')
+if(window.location.pathname === '/index.html' || window.location.pathname === '/')
 {
   signupProcessing();
 }
