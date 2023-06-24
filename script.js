@@ -84,7 +84,7 @@ function signUpProcessing(){
 function atProfile(){
 
   if (isAuthenticated()){
-    window.location.href = '/profile.html';
+    window.location.href = 'profile.html';
   }
 
   const userData = JSON.parse(localStorage.getItem('userData'));
@@ -102,7 +102,7 @@ function atProfile(){
 
   logoutBtn.addEventListener('click', () => {
     localStorage.removeItem('userData');
-    window.location.href = '/index.html';
+    window.location.href = 'index.html';
   }); 
 }
 
