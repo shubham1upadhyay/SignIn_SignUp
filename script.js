@@ -89,8 +89,6 @@ function atProfile(){
 
   const userData = JSON.parse(localStorage.getItem('userData'));
   let name = document.getElementById("user-name");
-
-  console.log(name);
   let em = document.getElementById("user-email");
   let p = document.getElementById("user-pass");
 
@@ -103,6 +101,15 @@ function atProfile(){
 
 function logout(){
   localStorage.removeItem('userData');
+
+  let name = document.getElementById("user-name");
+  let em = document.getElementById("user-email");
+  let p = document.getElementById("user-pass");
+
+  name.innerHTML ='';
+  em.innerHTML ='';
+  p.innerHTML = '';
+
   window.location.href = 'index.html';
 }
 
