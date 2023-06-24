@@ -66,4 +66,10 @@ span{
     #signup{
         margin-top: 10px;
     }
+
+    .time{
+        color:yellow;
+        font-size: 18px;
+    }
+
 }
