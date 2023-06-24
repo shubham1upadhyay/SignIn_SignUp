@@ -1,0 +1,55 @@
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid white;
+}
+label{
+    margin-top: 20px;
+    font-size: 20px;
+}
+input:focus{
+    outline: none;
+}
+button:focus{
+    outline: none;
+    border: none;
+}
+.hide{
+    display:none;
+}
+.e-msg{
+    color:red;
+    margin-top: 40px;
+}
+.s-msg{
+    color:green;
+    margin-top: 40px;
+}
+.time{
+    color:yellow;
+    font-size: 20px;
+}
+span{
+    color:red;
+    text-shadow: -1px 0px white;
+}
+#signup{
+    margin-left: -10px;
+    margin-top: 30px;
+    border:1px white solid;
+}
+#signup:hover{
+ border: 1px red solid;
+}
+
+#logout:hover{
+    border: 1px red solid;
+}
+
+/* profile page styling */
+.hr1{
+    border: 2px solid white;
+    width: 100px;
+    color:rgb(245, 239, 239);
+    margin-top: -35px;
+}
