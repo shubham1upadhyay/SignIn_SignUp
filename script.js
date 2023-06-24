@@ -102,7 +102,7 @@ function atProfile(){
 
   logoutBtn.addEventListener('click', () => {
     localStorage.removeItem('userData');
-    window.location.href = '/';
+    window.location.href = '/index.html';
   }); 
 }
 
