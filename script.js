@@ -98,12 +98,12 @@ function atProfile(){
    em.innerHTML =`${userData.email}`;
    p.innerHTML =`${userData.password}`;
 
-  const logoutBtn = document.getElementById('logout-btn');
 
-  logoutBtn.addEventListener('click', () => {
-    localStorage.removeItem('userData');
-    window.location.href = 'index.html';
-  }); 
+}  
+
+function logout(){
+  localStorage.removeItem('userData');
+  window.location.href = 'index.html';
 }
 
 // function to generate access token
