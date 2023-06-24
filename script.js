@@ -104,7 +104,7 @@ function atProfile(){
 }
 
 
-if(window.location.pathname === '/index.html' || window.location.pathname === '/')
+if(window.location.pathname === '/index.html' || window.location.pathname === '/' || window.location.pathname === 'https://shubham1upadhyay.github.io/SignIn_SignUp/')
 {
   signupProcessing();
 }
