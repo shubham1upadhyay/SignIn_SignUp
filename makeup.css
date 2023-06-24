@@ -53,3 +53,17 @@ span{
     color:rgb(245, 239, 239);
     margin-top: -35px;
 }
+.user-d{
+    font-size: 20px;
+}
+
+@media screen and (max-width:768px) {
+    
+    .user-d{
+        font-size: 18px;
+    }
+
+    #signup{
+        margin-top: 10px;
+    }
+}
