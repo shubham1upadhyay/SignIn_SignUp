@@ -72,7 +72,7 @@ function signupProcessing(){
    `;
    
    setTimeout(() => {
-       window.location.href = 'profile.html';
+       window.location.href = '/profile.html';
      }, 2000);
     }
   });
@@ -99,7 +99,7 @@ function atProfile(){
 
   logoutBtn.addEventListener('click', () => {
     localStorage.removeItem('userData');
-    window.location.href = '/';
+    window.location.href = '/index.html';
   }); 
 }
 
