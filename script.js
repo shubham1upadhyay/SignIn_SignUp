@@ -111,15 +111,10 @@ function logout(){
 }
 
 // function to generate access token
-function generateToken(){
-  
-  let tokens = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j', 'k', 'l', 'm'];
-  let token = "";
-  
-  for(let i=0; i<12; i++)
-  {
-    let random = Math.floor(Math.random() * tokens.length);
-    token += tokens[random];
-  }
+function generateToken(length=10){
+  const tokens = new Uint8Array(length);
+  crypto.getRandomValues(tokens);
+
+  const token = Array.from(tokens, byte => byte.toString(16).padStart(2, '0')).join('');
   return token;
 }
