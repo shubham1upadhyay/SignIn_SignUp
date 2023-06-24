@@ -75,6 +75,7 @@ function signUpProcessing(){
    setTimeout(() => {
        window.location.href = 'profile.html';
      }, 2000);
+
     }
   // });
 
@@ -91,10 +92,14 @@ function atProfile(){
   let em = document.getElementById("user-email");
   let p = document.getElementById("user-pass");
 
+
    name.innerHTML =`${userData.name}`;
    em.innerHTML =`${userData.email}`;
    p.innerHTML =`${userData.password}`;
-
+   let lb = document.getElementById("lb");
+    lb.innerHTML =`
+       <button onclick="logout()" class="logout border-0 bg-black text-white fs-5 mx-3">Logout</button>
+    `;
 
 }  
 
