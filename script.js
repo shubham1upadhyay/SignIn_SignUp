@@ -82,7 +82,6 @@ function signUpProcessing(){
 
 //functions at profile page
 function atProfile(){
-  msg.innerHTML = '';
   if (isAuthenticated()){
     window.location.href = 'profile.html';
   }
@@ -101,15 +100,6 @@ function atProfile(){
 
 function logout(){
   localStorage.removeItem('userData');
-
-  let name = document.getElementById("user-name");
-  let em = document.getElementById("user-email");
-  let p = document.getElementById("user-pass");
-
-  name.innerHTML ='';
-  em.innerHTML ='';
-  p.innerHTML = '';
-
   window.location.href = 'index.html';
 }
 
