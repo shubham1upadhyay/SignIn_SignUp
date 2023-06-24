@@ -18,7 +18,7 @@ function isAuthenticated(){
 
 //function for validating and storing the data
 function signUpProcessing(){
-  // signupBtn.addEventListener('click', ()=>{
+// signupBtn.addEventListener('click', ()=>{
   const msg = document.getElementById("message");
   let name = fullName.value;
   let e = email.value;
@@ -83,6 +83,7 @@ function signUpProcessing(){
 
 //functions at profile page
 function atProfile(){
+
   if (isAuthenticated()){
     window.location.href = 'profile.html';
   }
@@ -97,12 +98,11 @@ function atProfile(){
    em.innerHTML =`${userData.email}`;
    p.innerHTML =`${userData.password}`;
 
-
    let lb = document.getElementById("lb");
     lb.innerHTML =`
        <button onclick="logout()" class="logout border-0 bg-black text-white fs-5 mx-3">Logout</button>
     `;
-
+  
 }  
 
 function logout(){
@@ -111,10 +111,13 @@ function logout(){
 }
 
 // function to generate access token
-function generateToken(length=10){
-  const tokens = new Uint8Array(length);
-  crypto.getRandomValues(tokens);
-
-  const token = Array.from(tokens, byte => byte.toString(16).padStart(2, '0')).join('');
+function generateToken(){
+  let tokens = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j', 'k', 'l', 'm'];
+  let token = "";
+  for(let i=0; i<=16; i++)
+  {
+    let random = Math.floor(Math.random() * tokens.length);
+    token += tokens[random];
+  }
   return token;
 }
